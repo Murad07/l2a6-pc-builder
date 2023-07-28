@@ -1,14 +1,22 @@
 import React from "react";
 import Head from "next/head";
 import { Layout, Menu } from "antd";
+import Link from "next/link";
 
 const { Header, Content, Footer } = Layout;
 
 const RootLayout = ({ children }) => {
+  const menuItems = [
+    { label: "One", link: "/one" },
+    { label: "Thow", link: "/one" },
+    { label: "Three", link: "/one" },
+    { label: "FOur", link: "/one" },
+    { label: "PC Builder", link: "/pcBuilder" },
+  ];
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>PC Builder</title>
       </Head>
       <Layout style={{ minHeight: "100vh" }}>
         <Header
@@ -26,7 +34,15 @@ const RootLayout = ({ children }) => {
               const key = index + 1;
               return {
                 key,
-                label: `nav ${key}`,
+                label: (
+                  <a
+                    href={`${menuItems[index].link}`}
+                    // target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {`${menuItems[index].label}`}
+                  </a>
+                ),
               };
             })}
           />
