@@ -7,12 +7,27 @@ const { Header, Content, Footer } = Layout;
 
 const RootLayout = ({ children }) => {
   const menuItems = [
-    { label: "One", link: "/one" },
-    { label: "Thow", link: "/one" },
-    { label: "Three", link: "/one" },
-    { label: "FOur", link: "/one" },
-    { label: "PC Builder", link: "/pcBuilder" },
+    { key: "1", label: "One", link: "/" },
+    { key: "2", label: "Categories", link: "/two", subMenu: true },
+    { key: "3", label: "Three", link: "/three" },
+    { key: "4", label: "Four", link: "/four" },
+    { key: "5", label: "PC Builder", link: "/pcBuilder" },
   ];
+
+  const categorySubItems = [
+    { key: "1", label: "CPU / Processor", link: "/catagories/caprocessor" },
+    { key: "2", label: "Motherboard", link: "/catagories/motherboard" },
+    { key: "3", label: "RAM", link: "/ram" },
+    {
+      key: "4",
+      label: "Power Supply Unit",
+      link: "/catagories/power-supply-unit",
+    },
+    { key: "5", label: "Storage Device", link: "/catagories/storage-device" },
+    { key: "6", label: "Monitor", link: "/catagories/monitor" },
+    { key: "7", label: "Others", link: "/catagories/others" },
+  ];
+
   return (
     <>
       <Head>
@@ -30,20 +45,39 @@ const RootLayout = ({ children }) => {
             theme="dark"
             mode="horizontal"
             defaultSelectedKeys={["1"]}
-            items={new Array(5).fill(null).map((_, index) => {
-              const key = index + 1;
-              return {
-                key,
-                label: (
-                  <a
-                    href={`${menuItems[index].link}`}
-                    // target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {`${menuItems[index].label}`}
-                  </a>
-                ),
-              };
+            items={menuItems.map((item) => {
+              if (item.subMenu && item.key == 2) {
+                return {
+                  key: item.key,
+                  label: item.label,
+                  children:
+                    item.key === "2"
+                      ? categorySubItems.map((subItem) => ({
+                          key: `${item.key}-${subItem.key}`,
+                          label: (
+                            <Link href={subItem.link}>{subItem.label}</Link>
+                          ),
+                        }))
+                      : [
+                          {
+                            key: `${item.key}-1`,
+                            label: (
+                              <a
+                                href={`${item.link}`}
+                                rel="noopener noreferrer"
+                              >
+                                Sub-Menu 1
+                              </a>
+                            ),
+                          },
+                        ],
+                };
+              } else {
+                return {
+                  key: item.key,
+                  label: <Link href={`${item.link}`}>{item.label}</Link>,
+                };
+              }
             })}
           />
         </Header>
