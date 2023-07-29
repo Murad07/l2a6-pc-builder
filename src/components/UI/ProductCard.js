@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card } from "antd";
+import { Card, Rate } from "antd";
 import Link from "next/link";
 const { Meta } = Card;
 
@@ -27,7 +27,9 @@ const ProductCard = ({
         <p>Category: {category}</p>
         <p>Price: {price}</p>
         <p>Status: {status}</p>
-        <p>Rating: {rating}</p>
+        <p>
+          Rating: <Rate disabled defaultValue={rating} />
+        </p>
       </Card>
     </Link>
   );

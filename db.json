@@ -647,5 +647,14 @@
         }
       ]
     }
+  ],
+  "categories": [
+    { "id": "1", "name": "CPU" },
+    { "id": "1", "name": "Motherboard" },
+    { "id": "1", "name": "RAM" },
+    { "id": "1", "name": "Monitor" },
+    { "id": "1", "name": "Power Supply" },
+    { "id": "1", "name": "Storage Device" },
+    { "id": "1", "name": "Others" }
   ]
 }

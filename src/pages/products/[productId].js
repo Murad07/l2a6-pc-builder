@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Card, Col, Row } from "antd";
+import { Card, Col, Rate, Row } from "antd";
 import Image from "next/image";
 import RootLayout from "@/components/Layouts/RootLayout";
 
@@ -17,7 +17,9 @@ const ProductDetails = ({ product }) => {
             <p>Status: {product?.status}</p>
             <p>Price: {product?.price}</p>
             {/* <p>Individual Rating: {product.rating.individual}</p> */}
-            <p>Average Rating: {product?.rating}</p>
+            <p>
+              Average Rating: <Rate disabled defaultValue={product?.rating} />
+            </p>
           </Col>
           <Col xs={24} sm={12} span={12}>
             <Image

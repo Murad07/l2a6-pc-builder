@@ -1,10 +1,13 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import FeaturedCategories from "@/components/UI/FeatureCategories";
 import FeaturedProducts from "@/components/UI/FeaturedProducts";
 
-const HomePage = ({ allProducts }) => {
+const HomePage = ({ allProducts, allCategories }) => {
   return (
     <RootLayout>
       <FeaturedProducts allProducts={allProducts} />
+
+      <FeaturedCategories allCategories={allCategories} />
     </RootLayout>
   );
 };
@@ -16,19 +19,24 @@ export const getStaticProps = async () => {
   const res = await fetch("http://localhost:5000/products"); // --> json server
   const data = await res.json();
 
+  const resCat = await fetch("http://localhost:5000/categories"); // --> json server
+  let dataCat = await resCat.json();
+  dataCat = dataCat.slice(0, 6);
+
   // Shuffle the array of products
   const shuffledProducts = shuffleArray(data);
 
   // Get the first 6 products from the shuffled array
   const randomProducts = shuffledProducts.slice(0, 6);
-  console.log(randomProducts);
+  console.log(dataCat);
 
   return {
     props: {
       allProducts: randomProducts,
+      allCategories: dataCat,
       // allNews: data.data, // when using internal API connected with mongoDB
     },
-    revalidate: 10,
+    revalidate: 30,
   };
 };
 

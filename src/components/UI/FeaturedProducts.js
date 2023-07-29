@@ -1,12 +1,7 @@
 import ProductCard from "./ProductCard";
-
-import Img1 from "../../../public/img_1.jpg";
-import Img2 from "../../../public/img_2.jpg";
 import { Col, Row } from "antd";
 
 const FeaturedProducts = ({ allProducts }) => {
-  // Replace these with actual blog data
-
   return (
     <div>
       <h1>Featured product</h1>
