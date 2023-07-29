@@ -14,9 +14,7 @@ const ProductDetails = ({ product }) => {
             <p>Status: {product?.status}</p>
             <p>Price: {product?.price}</p>
             {/* <p>Individual Rating: {product.rating.individual}</p> */}
-            <p>
-              Average Rating: <Rate disabled defaultValue={product?.rating} />
-            </p>
+            Average Rating: <Rate disabled defaultValue={product?.rating} />
           </Col>
           <Col xs={24} sm={12} span={12}>
             <Image
@@ -51,8 +49,8 @@ const ProductDetails = ({ product }) => {
               }}
             >
               <h4>{review.user}</h4>
-              <p>Rating: {review.rating}</p>
-              <p>Comment: {review.comment}</p>
+              Individual Rating: <Rate disabled defaultValue={review?.rating} />
+              <p>Comment: {review?.comment}</p>
             </div>
           ))}
         </div>
