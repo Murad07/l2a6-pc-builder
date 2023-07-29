@@ -1,0 +1,202 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "LG 24MP400-B 24 Full HD IPS Monitor",
+      "category": "Monitor",
+      "price": "8000",
+      "status": "1",
+      "rating": "4",
+      "image_url": "/images/img1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "High-Resolution Walton Monitor",
+      "category": "Monitor",
+      "price": "7000",
+      "status": "1",
+      "rating": "3.5",
+      "image_url": "/images/img2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "HD DELL Monitor",
+      "category": "Monitor",
+      "price": "9000",
+      "status": "1",
+      "rating": "5",
+      "image_url": "/images/img1.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Powerful Quad-Core CPU",
+      "category": "CPU",
+      "price": "12000",
+      "status": "1",
+      "rating": "5",
+      "image_url": "/images/img6.jpg"
+    },
+    {
+      "id": "5",
+      "name": "AMD Ryzen 3 4100 Processor",
+      "category": "CPU",
+      "price": "13000",
+      "status": "0",
+      "rating": "4.5",
+      "image_url": "/images/img5.jpg"
+    },
+    {
+      "id": "6",
+      "name": "AMD Ryzen 5 1600X Processor",
+      "category": "CPU",
+      "price": "13000",
+      "status": "1",
+      "rating": "4.2",
+      "image_url": "/images/img6.jpg"
+    },
+    {
+      "id": "7",
+      "name": "16GB DDR4 RAM",
+      "category": "RAM",
+      "price": "4000",
+      "status": "1",
+      "rating": "4",
+      "image_url": "/images/img3.jpg"
+    },
+    {
+      "id": "8",
+      "name": "8GB DDR4 RAM",
+      "category": "RAM",
+      "price": "3000",
+      "status": "1",
+      "rating": "4.1",
+      "image_url": "/images/img3.jpg"
+    },
+    {
+      "id": "9",
+      "name": "4GB DDR4 RAM",
+      "category": "RAM",
+      "price": "2500",
+      "status": "0",
+      "rating": "4.1",
+      "image_url": "/images/img3.jpg"
+    },
+    {
+      "id": "10",
+      "name": "High-Performance Motherboard",
+      "category": "Motherboard",
+      "price": "9000",
+      "status": "0",
+      "rating": "4",
+      "image_url": "/images/img4.jpg"
+    },
+    {
+      "id": "11",
+      "name": "High-Def Motherboard",
+      "category": "Motherboard",
+      "price": "8000",
+      "status": "1",
+      "rating": "4",
+      "image_url": "/images/img7.jpg"
+    },
+    {
+      "id": "12",
+      "name": "MD Motherboard",
+      "category": "Motherboard",
+      "price": "11000",
+      "status": "1",
+      "rating": "4",
+      "image_url": "/images/img4.jpg"
+    },
+    {
+      "id": "13",
+      "name": "850W 80+ Gold Power Supply",
+      "category": "Power Supply",
+      "price": "12000",
+      "status": "1",
+      "rating": "5",
+      "image_url": "/images/img8.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Walton R8 Power Supply",
+      "category": "Power Supply",
+      "price": "9000",
+      "status": "1",
+      "rating": "5",
+      "image_url": "/images/img9.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Supper N2 Power Supply",
+      "category": "Power Supply",
+      "price": "10000",
+      "status": "1",
+      "rating": "3.5",
+      "image_url": "/images/img8.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Toshiba S300 1TB 5700rpm 3.5 Surveillance Hard Drive",
+      "category": "Storage Device",
+      "price": "7000",
+      "status": "1",
+      "rating": "5",
+      "image_url": "/images/img10.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Seagate 2TB Portable External HDD",
+      "category": "Storage Device",
+      "price": "5000",
+      "status": "1",
+      "rating": "4",
+      "image_url": "/images/img11.jpg"
+    },
+    {
+      "id": "18",
+      "name": "Seagate Internal 1TB SATA Barracuda HDD",
+      "category": "Storage Device",
+      "price": "1000",
+      "status": "0",
+      "rating": "4.2",
+      "image_url": "/images/img11.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Asus RS200 ROG Strix Riser Cable",
+      "category": "Graphics Card",
+      "price": "18000",
+      "status": "1",
+      "rating": 5,
+      "image_url": "/images/img12.jpg"
+    },
+    {
+      "id": "20",
+      "name": "Antec T120 Chromatic CPU Air Cooler",
+      "category": "Cooling System",
+      "price": "6000",
+      "status": "1",
+      "rating": 4,
+      "image_url": "/images/img13.jpg"
+    },
+    {
+      "id": "21",
+      "name": "ZADAK MOAB II Elite Water Cooled PC Case",
+      "category": "Case",
+      "price": "4000",
+      "status": "1",
+      "rating": 3,
+      "image_url": "/images/img14.jpg"
+    },
+    {
+      "id": "23",
+      "name": "Meetion MT-K800 Colored Big Keys Kids Keyboard",
+      "category": "Keyboard",
+      "price": "3000",
+      "status": "1",
+      "rating": 4,
+      "image_url": "/images/img15.jpg"
+    }
+  ]
+}
