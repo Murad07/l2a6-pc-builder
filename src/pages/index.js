@@ -4,7 +4,6 @@ import FeaturedProducts from "@/components/UI/FeaturedProducts";
 const HomePage = ({ allProducts }) => {
   return (
     <RootLayout>
-      <h1>Welcome to my Next.js App with Ant Design!</h1>
       <FeaturedProducts allProducts={allProducts} />
     </RootLayout>
   );
