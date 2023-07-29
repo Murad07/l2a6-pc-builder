@@ -27,9 +27,9 @@ const ProductCard = ({
         <p>Category: {category}</p>
         <p>Price: {price}</p>
         <p>Status: {status}</p>
-        <p>
-          Rating: <Rate disabled defaultValue={rating} />
-        </p>
+        {/* <p> */}
+        Rating: <Rate disabled defaultValue={rating} />
+        {/* </p> */}
       </Card>
     </Link>
   );

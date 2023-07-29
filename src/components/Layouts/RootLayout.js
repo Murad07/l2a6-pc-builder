@@ -7,25 +7,23 @@ const { Header, Content, Footer } = Layout;
 
 const RootLayout = ({ children }) => {
   const menuItems = [
-    { key: "1", label: "One", link: "/" },
+    { key: "1", label: "Home", link: "/" },
     { key: "2", label: "Categories", link: "/two", subMenu: true },
-    { key: "3", label: "Three", link: "/three" },
-    { key: "4", label: "Four", link: "/four" },
-    { key: "5", label: "PC Builder", link: "/pcBuilder" },
+    { key: "3", label: "PC Builder", link: "/pcBuilder" },
   ];
 
   const categorySubItems = [
-    { key: "1", label: "CPU / Processor", link: "/catagories/caprocessor" },
-    { key: "2", label: "Motherboard", link: "/catagories/motherboard" },
-    { key: "3", label: "RAM", link: "/ram" },
+    { key: "1", label: "CPU / Processor", link: "/categories/1" },
+    { key: "2", label: "Motherboard", link: "/categories/2" },
+    { key: "3", label: "RAM", link: "/categories/3" },
     {
       key: "4",
       label: "Power Supply Unit",
-      link: "/catagories/power-supply-unit",
+      link: "/categories/5",
     },
-    { key: "5", label: "Storage Device", link: "/catagories/storage-device" },
-    { key: "6", label: "Monitor", link: "/catagories/monitor" },
-    { key: "7", label: "Others", link: "/catagories/others" },
+    { key: "5", label: "Storage Device", link: "/categories/6" },
+    { key: "6", label: "Monitor", link: "/categories/4" },
+    { key: "7", label: "Others", link: "/categories/7" },
   ];
 
   return (

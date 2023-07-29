@@ -1,9 +1,6 @@
-import { useRouter } from "next/router";
 import { Card, Col, Rate, Row } from "antd";
 import Image from "next/image";
 import RootLayout from "@/components/Layouts/RootLayout";
-
-const { Meta } = Card;
 
 const ProductDetails = ({ product }) => {
   console.log(product);

@@ -1,17 +1,20 @@
 import { Card } from "antd";
+import Link from "next/link";
 
 const CategoriesCard = ({ cat }) => {
   return (
-    <Card
-      hoverable
-      style={
-        {
-          // padding: auto,
+    <Link href={`/categories/${cat?.id}`}>
+      <Card
+        hoverable
+        style={
+          {
+            // padding: auto,
+          }
         }
-      }
-    >
-      <h1>{cat?.name}</h1>
-    </Card>
+      >
+        <h1>{cat?.name}</h1>
+      </Card>
+    </Link>
   );
 };
 
