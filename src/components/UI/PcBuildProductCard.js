@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 const PcBuildProductCard = (product) => {
   const router = useRouter();
   const dispatch = useDispatch();
+
   const handleAddProduct = (productData) => {
     dispatch(addToPcBuild(productData));
     router.push("/pcBuilder");

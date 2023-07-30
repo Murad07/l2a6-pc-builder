@@ -9,13 +9,13 @@ const pcbuildSlice = createSlice({
   initialState,
   reducers: {
     addToPcBuild: (state, action) => {
-      state.products.push({ ...action.payload });
+      state.products[action.payload.catId - 1] = { ...action.payload };
     },
-    removeFromPcBuild: (state, action) => {
-      state.products = state.products.filter(
-        (product) => product._id !== action.payload._id
-      );
-    },
+    // removeFromPcBuild: (state, action) => {
+    //   state.products = state.products.filter(
+    //     (product) => product._id !== action.payload._id
+    //   );
+    // },
   },
 });
 
