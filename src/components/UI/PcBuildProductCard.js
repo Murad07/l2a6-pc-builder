@@ -1,17 +1,17 @@
 import Image from "next/image";
-import { Button, Card, Col, Divider, Rate, Row } from "antd";
-import Link from "next/link";
-const { Meta } = Card;
+import { Button, Col, Divider, Rate, Row } from "antd";
+import { useDispatch } from "react-redux";
+import { addToPcBuild } from "@/redux/features/pcbuildSlice";
+import { useRouter } from "next/router";
 
-const PcBuildProductCard = ({
-  id,
-  name,
-  image_url,
-  category,
-  price,
-  status,
-  rating,
-}) => {
+const PcBuildProductCard = (product) => {
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const handleAddProduct = (productData) => {
+    dispatch(addToPcBuild(productData));
+    router.push("/pcBuilder");
+  };
+
   return (
     <>
       <Row>
@@ -23,14 +23,19 @@ const PcBuildProductCard = ({
             backgroundColor: "#EBECF8",
           }}
         >
-          <Image src={image_url} alt={name} width={250} height={250} />
+          <Image
+            src={product.image_url}
+            alt={product.name}
+            width={250}
+            height={250}
+          />
         </Col>
         <Col flex="auto" style={{ paddingLeft: 10 }}>
-          <h4>{name}</h4>
-          <p>Category: {category}</p>
-          <p>Price: {price}</p>
-          <p>Status: {status}</p>
-          Rating: <Rate disabled defaultValue={rating} />
+          <h4>{product.name}</h4>
+          <p>Category: {product.category}</p>
+          <p>Price: {product.price}</p>
+          <p>Status: {product.status}</p>
+          Rating: <Rate disabled defaultValue={product.rating} />
         </Col>
         <Col
           flex="70px"
@@ -41,7 +46,11 @@ const PcBuildProductCard = ({
           }}
         >
           {/* <Link href={`/buildproducts/${item?.id}`}> */}
-          <Button type="primary" ghost>
+          <Button
+            type="primary"
+            ghost
+            onClick={() => handleAddProduct(product)}
+          >
             Add
           </Button>
           {/* </Link> */}

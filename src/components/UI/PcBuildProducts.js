@@ -5,8 +5,8 @@ const PcBuildProducts = ({ allProducts, catName }) => {
     <div>
       <h1>{catName}</h1>
       <div className="blog-card-container">
-        {allProducts.map((blog, index) => (
-          <PcBuildProductCard key={index} {...blog} />
+        {allProducts.map((product, index) => (
+          <PcBuildProductCard key={index} {...product} />
         ))}
       </div>
     </div>
