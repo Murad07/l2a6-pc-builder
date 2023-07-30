@@ -316,7 +316,7 @@
       "catId": "2",
       "price": "8000",
       "status": "In Stock",
-      "rating": "4",
+      "rating": "5",
       "image_url": "/images/img7.jpg",
       "description": "This is a sample product description. This is a sample product description. This is a sample product description.",
       "key_features": [
@@ -346,7 +346,7 @@
       "catId": "2",
       "price": "11000",
       "status": "In Stock",
-      "rating": "4",
+      "rating": "3.5",
       "image_url": "/images/img4.jpg",
       "description": "This is a sample product description. This is a sample product description. This is a sample product description.",
       "key_features": [
