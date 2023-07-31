@@ -149,7 +149,7 @@ const PcBuilder = () => {
             disabled={nonEmptyItemsCount < 6}
             onClick={() => handleBuildComplete()}
           >
-            Comple
+            Comple Build
           </Button>
         </div>
 

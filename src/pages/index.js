@@ -1,10 +1,12 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import Banner from "@/components/UI/Banner";
 import FeaturedCategories from "@/components/UI/FeatureCategories";
 import FeaturedProducts from "@/components/UI/FeaturedProducts";
 
 const HomePage = ({ allProducts, allCategories }) => {
   return (
     <RootLayout>
+      <Banner />
       <FeaturedProducts allProducts={allProducts} />
 
       <FeaturedCategories allCategories={allCategories} />
