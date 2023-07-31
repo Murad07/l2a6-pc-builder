@@ -1,11 +1,14 @@
 import React from "react";
 import Head from "next/head";
-import { Layout, Menu } from "antd";
+import { Button, Layout, Menu } from "antd";
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const { Header, Content, Footer } = Layout;
 
 const RootLayout = ({ children }) => {
+  const { data: session } = useSession();
+
   const menuItems = [
     { key: "1", label: "Home", link: "/" },
     { key: "2", label: "Categories", link: "/two", subMenu: true },
@@ -78,6 +81,15 @@ const RootLayout = ({ children }) => {
               }
             })}
           />
+          {session?.user ? (
+            <Button type="primary" onClick={() => signOut()}>
+              Logout
+            </Button>
+          ) : (
+            <Button type="primary" onClick={() => signIn()}>
+              Login
+            </Button>
+          )}
         </Header>
         <Content
           style={{
