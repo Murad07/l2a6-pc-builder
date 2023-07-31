@@ -1,5 +1,7 @@
 This is a Next Js Pc Builder Project.
 
+## Live site: https://l2a6-pc-builder-murad07.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
