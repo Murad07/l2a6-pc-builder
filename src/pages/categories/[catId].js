@@ -13,21 +13,31 @@ const ProductCategory = ({ product, catName }) => {
 export default ProductCategory;
 
 export const getServerSideProps = async (context) => {
+  // if (typeof window === "undefined") {
+  //   return {
+  //     props: {
+  //       product: [],
+  //       catName: [],
+  //     },
+  //   };
+  // }
+
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/products`);
+  const res = await fetch(`${process.env.URL}/products`);
   const data = await res.json();
+  const allProducts = data.data;
 
   const resCat = await fetch(
-    `http://localhost:5000/categories/${params.catId}`
+    `${process.env.URL}/categories?catId=${params.catId}`
   );
   const dataCat = await resCat.json();
-  const catName = dataCat?.name;
+  const catName = dataCat.data.name;
 
-  const filteredProducts = data?.filter(
+  const filteredProducts = allProducts?.filter(
     (product) => product.catId === params.catId
   );
 
-  //   console.log(data);
+  // console.log(catName);
 
   return {
     props: {

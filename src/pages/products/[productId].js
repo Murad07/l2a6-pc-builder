@@ -62,14 +62,24 @@ const ProductDetails = ({ product }) => {
 export default ProductDetails;
 
 export const getServerSideProps = async (context) => {
+  // if (typeof window === "undefined") {
+  //   return {
+  //     props: {
+  //       product: [],
+  //     },
+  //   };
+  // }
+
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/products/${params.productId}`);
+  const res = await fetch(
+    `${process.env.URL}/products?pId=${params.productId}`
+  );
   const data = await res.json();
-  console.log(data);
+  console.log(data.data);
 
   return {
     props: {
-      product: data,
+      product: data.data,
     },
   };
 };

@@ -2,6 +2,7 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
 import FeaturedCategories from "@/components/UI/FeatureCategories";
 import FeaturedProducts from "@/components/UI/FeaturedProducts";
+// import fetch from "node-fetch";
 
 const HomePage = ({ allProducts, allCategories }) => {
   return (
@@ -17,20 +18,30 @@ const HomePage = ({ allProducts, allCategories }) => {
 export default HomePage;
 
 export const getStaticProps = async () => {
-  // const res = await fetch("http://localhost:3000/api/news"); // internal API connected with mongoDB
-  const res = await fetch("http://localhost:5000/products"); // --> json server
+  // if (typeof window === "undefined") {
+  //   return {
+  //     props: {
+  //       allProducts: [],
+  //       allCategories: [],
+  //     },
+  //   };
+  // }
+  // const res = await fetch(`${process.env.URL}/api/pcbuild`); // internal API connected with mongoDB
+  const res = await fetch(`${process.env.URL}/products`); // --> json server
   const data = await res.json();
 
-  const resCat = await fetch("http://localhost:5000/categories"); // --> json server
+  const resCat = await fetch(`${process.env.URL}/categories`); // --> json server
   let dataCat = await resCat.json();
-  dataCat = dataCat.slice(0, 6);
+
+  // console.log(dataCat.data);
+  dataCat = dataCat.data.slice(0, 6);
 
   // Shuffle the array of products
-  const shuffledProducts = shuffleArray(data);
+  const shuffledProducts = shuffleArray(data.data);
 
   // Get the first 6 products from the shuffled array
   const randomProducts = shuffledProducts.slice(0, 6);
-  console.log(dataCat);
+  // console.log(dataCat);
 
   return {
     props: {

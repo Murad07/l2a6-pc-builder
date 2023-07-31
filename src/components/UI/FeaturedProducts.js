@@ -7,7 +7,7 @@ const FeaturedProducts = ({ allProducts }) => {
       <h1>Featured product</h1>
       <div className="blog-card-container">
         <Row gutter={[15, 15]}>
-          {allProducts.map((blog, index) => (
+          {allProducts?.map((blog, index) => (
             <Col xs={24} sm={6} key={index} span={6}>
               <ProductCard key={index} {...blog} />
             </Col>
